@@ -1,0 +1,46 @@
+[{
+	"question": "The standard consistency of cement varies from",
+	"answers": {
+		"a": "22% to 33%",
+		"b": "26% to 33%",
+		"c": "29% to 35%",
+		"d": "None of the above"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "The standard consistency test helps to determine the _________________ for other tests. ",
+	"answers": {
+		"a": "Cement content",
+		"b": "Slump",
+		"c": "Water content",
+		"d": "Setting time"
+	},
+	"correctAnswer": "c"
+}, {
+	"question": "Select the odd one out of these",
+	"answers": {
+		"a": "Slump Test",
+		"b": "Compaction Factor Test",
+		"c": "Vee Bee Consistometer Test",
+		"d": "Standard Consistency Test"
+	},
+	"correctAnswer": "d"
+}, {
+	"question": "Consistency is a term which indicates the ",
+	"answers": {
+		"a": "Degree of fluidity",
+		"b": "Degree of mobility",
+		"c": "Both a and b",
+		"d": "None of the above"
+	},
+	"correctAnswer": "c"
+}, {
+	"question": "The cement grade standard whose Initial Setting Time and Final Setting Time is 30min and 600min is ",
+	"answers": {
+		"a": "Super Sulphated",
+		"b": "OPC",
+		"c": "PSC",
+		"d": "None of the above"
+	},
+	"correctAnswer": "b"
+}]
