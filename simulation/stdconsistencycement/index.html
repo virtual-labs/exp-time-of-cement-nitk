@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+
+<title>SOLVE</title>
+<link rel="stylesheet" href="css/mathstyle.css" />
+<link rel="stylesheet" href="css/scc.css" />
+<script type="text/javascript" src= "js/jquerymin.js"></script>
+<script type="text/javascript" src= "js/scc.js"></script>
+
+<script>
+var simsubscreennum=0;
+var temp=0;
+var lnt=0;
+</script>
+<style>
+.popup
+{
+	border-radius:5px;
+	background-color:black;
+	color:white;
+	padding:5px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 500px;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px 10px 10px 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 100;
+  <!-- text-align:center; -->
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+</style>
+</head>
+
+<body style="margin:0; font-family:verdana; font-size:14px;">
+<!--Simulation Screen start		-->
+<div id="simscreen">
+
+<!--Title of Simulation		-->
+<div id="title"><h3>Standard Consistency of cement</h3></div>
+
+<!--SubScreen Home	-->
+<div class="simsubscreen" id="canvas0">
+<h4 class="incanvas" style="font-family:verdana;" >Objective</h4>
+<p class="incanvas" style="font-family:verdana; font-size:14px;">To determine the standard consistency of given sample of cement by Vicat apparatus.</p></br>
+<h4 class="incanvas" style="font-family:verdana;">Apparatus used:</h4>
+<p class="incanvas" style="font-family:verdana; font-size:14px;">Vicat apparatus with Vicat plunger, Vicat mould, Measuring jar, Weighing scale, Trowel etc.</p>
+&nbsp;<span class="tooltip" style="border-bottom:1px dotted ; color:red; position:absolute; top:130px; text-align:justify;"><strong>Description</strong>
+<span  class="tooltiptext" style=""><strong style="color:red;">Standard Consistency of Cement</strong> is defined as that consistency which will permit the Vicat plunger to a point 5mm to 7mm from the bottom of the Vicat mould.</span></span>
+
+<img id="" style="position: absolute; left: 410px; top: 405px; width:150px;" title="Weighing scale" src="images/ewm.png"/>
+<img style="position:absolute; left:50px; top:170px;" title="" src="images/human.png" />
+<img id="" style="position: absolute; left: 225px; top:350px; width:90px;" title="Vicat apparatus" src="images/vic1.png"/>
+
+</div>
+
+
+<!--Step1	-->
+<div class="simsubscreen" id="canvas1" style="visibility:hidden">
+<strong id="titlestep" class="incanvas">STEP </strong>
+<span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
+
+<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;
+
+http-server h">&nbsp;Take cement in a pan and measure 300g of cement using the weighing scale.</p>
+
+<img id="ewm1" style="position: absolute; left: 230px; top: 255px;" src="images/ewm1.png"/>
+<img id="mw" style="position: absolute; left: 310px; top: 342px;visibility:hidden" src="images/mw.png"/>
+<img id="hp2-1" style="position: absolute; left:2px; top: 90px;visibility:hidden;" src="images/hp.png"/>
+
+<img id="swc2"  style="position: absolute; visibility: hidden; left: 468px; top: 120px;" src="images/ssc.png"/>
+<img id="wc" style="position: absolute; left: 318px; top: 229.5px; visibility:hidden" src="images/sc.png"/>
+
+<img id="p2" style="position: absolute; left: 251px; top: 212.25px;cursor:move;visibility:hidden" src="images/plate.png"/>
+
+
+<img id="pwc" style="position: absolute; left:350px; top:185px;visibility:hidden" src="images/pc.png"/>
+
+<img id="hand"  style="position: absolute; visibility: hidden; left: 420px; top: 65px;" src="images/pour.png"/>
+
+<img id="on2-1" style="position: absolute; left:300px; top: 380px; cursor:pointer;" src="images/on.png"/>
+<img id="off2-1" style="position: absolute; left: 330px; top: 380px;" src="images/off.png"/>
+<img id="zero2-1" style="position: absolute; left: 360px; top: 380px;" src="images/zero.png"/>
+<img id="tare2-1" style="position: absolute; left: 390px; top: 380px; cursor:pointer;" src="images/tare2.png"/>
+
+<img id="on2-2" style="position: absolute; left:295px; top: 380px;visibility:hidden" src="images/onblue.png"/>
+<img id="on2-3" style="position: absolute; left:300px; top: 380px;visibility:hidden; cursor:pointer;" src="images/on.png"/>
+<img id="tare2-3" style="position: absolute; left: 390px; top: 380px;visibility:hidden; cursor:pointer;" src="images/tare2.png"/>
+<img id="tare2-2" style="position: absolute; left: 385px; top: 380px;visibility:hidden; cursor:pointer;" src="images/tare3.png"/>
+<p id="v2-1" style="position:absolute;left: 342px; top:334px;visibility:hidden;font-family:verdana; font-size:14px;">00.00   g</p>
+<p id="v2-2" style="position:absolute;left: 326px; top:334px;visibility:hidden;font-family:verdana; font-size:14px;">300.00   g</p>
+</div>
+
+
+<!--Step2-->
+<div class="simsubscreen" id="canvas2" style="visibility:hidden">
+<strong id="titlestep" class="incanvas">STEP &nbsp;</strong>
+<span class="circlebg" id="stepnumber">&nbsp;2&nbsp;</span>
+<p id="pumptext-2" class="steptext" style="font-family:verdana; font-size:14px; ">&nbsp;Take water of about weight of dry cement a   nd mix it thoroughly with the cement using trowel. The gauging time should not be more than 3 to 5 minutes.</p>
+<p id="2-2" style="position:absolute;left: 10px; top:100px; font-family:verdana; font-size:14px;">Percentage of water = </p>
+<p id="2-3" style="position:absolute;left: 10px; top:150px; font-family:verdana; font-size:14px;">Quantity of cement taken = 300g</p>
+<!-- <p id="2-4" style="position:absolute;left: 13px; top:125px; font-family:verdana; font-size:16px;">Quantity of water to be added =  ml</p> -->
+
+<div id="22-1" style="position:absolute; left:10px; top:220px; font-family:verdana; font-size:14px;">
+<label id="l2-1">Quantity of water to be added (ml) = </label> <input id="output" type="text" style=" border:none; border-bottom: 1px solid; width:55px;" required >&nbsp;&nbsp;&nbsp;&nbsp;<input id="form" type="button" name="Formula" value="Formula"  />&nbsp;&nbsp;
+<input id="check" type="button" name="check" value="Check" style="position:absolute; left:420px;"/>
+<input id="result" type="button" name="Formula" value="Result" style="position:absolute; left:485px; visibility:hidden;" /></br>
+
+<p id="r1" style="position:absolute; left:322.5px; top:-27.5px; color:#32CD32; font-size:22px; visibility:hidden;" >&#10004;</p>
+<p id="w1" style="position:absolute; left:322.5px; top:-27.5px; color:red; font-size:22px; visibility:hidden;" >&#10008;</p>
+</br></br></br>
+<span id="formula" style="font-family:verdana; font-style:normal; border:1px solid black; padding:15px; visibility:hidden;">Quantity of water to be added = <span class="frac"><sup>Percentage of water x Quantity of cement taken</sup><span>&frasl;</span><sub>100</sub></span>
+</div>
+
+<div id="22-2" style="position:absolute; left:10px; top:220px; font-family:verdana; font-size:14px; visibility:hidden;">
+<label id="l2-2">Quantity of water to be added(ml) = </label> <input id="output2" type="text" style=" border:none; border-bottom: 1px solid; width:55px;" required >&nbsp;&nbsp;&nbsp;&nbsp;<input id="form2" type="button" name="Formula" value="Formula"  />&nbsp;&nbsp;
+<input id="check2" type="button" name="check" value="Check" style="position:absolute; left:420px;"/>
+<input id="result2" type="button" name="Formula" value="Result" style="position:absolute; left:485px;  visibility:hidden;" /></br>
+
+<p id="r2" style="position:absolute; left:322.5px; top:-27.5px; color:#32CD32; font-size:22px; visibility:hidden;" >&#10004;</p>
+<p id="w2" style="position:absolute; left:322.5px; top:-27.5px; color:red;  font-size:22px; visibility:hidden;" >&#10008;</p>
+</br></br></br>
+<span id="formula2" style="font-family:verdana; font-style:normal; border:1px solid black; padding:15px; visibility:hidden;">Quantity of water to be added = <span class="frac"><sup>Percentage of water x Quantity of cement taken</sup><span>&frasl;</span><sub>100</sub></span>
+</div>
+
+<img id="cylwat" style="position: absolute; left: 338px; top:345.75px; visibility:hidden;" src="images/cylwat.png"/>
+<img id="coverblue" style="position:absolute; left:222px; top:407px; visibility:hidden;" src="images/coverblue.png"/>
+<img id="coverblue2" style="position:absolute; left:222px; top:408px; visibility:hidden;" src="images/coverblue2.png"/>
+
+<img id="shaker1" style="position:absolute; left:320px; top:275px; visibility:hidden; cursor:pointer;" src="images/shaker1.png"/>
+<img id="shaker2" style="position:absolute; left:310px; top:265px; visibility:hidden;" src="images/shaker2.png"/>
+<img id="cement" style="position: absolute; left: 227px; top: 397.5px; visibility:hidden;" src="images/cement.png"/>
+
+<img id="wc3" style="position: absolute; left: 227px; top: 397.5px; visibility:hidden;" src="images/sc.png"/>
+<img id="cement2" style="position: absolute; left: 227px; top: 400.5px; visibility:hidden;" src="images/cement2.png"/>
+<img id="p3" style="position: absolute; left: 161px; top: 380.25px;visibility:hidden;" src="images/plate2.png"/>
+
+<img id="water" style="position:absolute; left:382px; top:190px; visibility:hidden;" src="images/water.png"/>
+<img id="water1" style="position:absolute; left:259px; top:377px; visibility:hidden;" src="images/water.png"/>
+
+<img id="msrdev" style="position:absolute; left: 320px; top:190px; visibility:hidden;" src="images/msrdev.png"/>
+<img id="msrdev1" style="position:absolute; left: 413px; top:158px; visibility:hidden; cursor:pointer;" src="images/msrdev1.png"/>
+<img id="msrdev2" style="position:absolute; left:275px; top:305px; visibility:hidden;" src="images/msrdev2.png"/>
+<img id="msrdev3" style="position:absolute; left: 413px; top:158px; visibility:hidden; cursor:pointer;" src="images/84.png"/>
+<img id="msrdev4" style="position:absolute; left: 413px; top:158px; visibility:hidden; cursor:pointer;" src="images/90.png"/>
+<img id="msrdev5" style="position:absolute; left: 413px; top:158px; visibility:hidden; cursor:pointer;" src="images/96.png"/>
+
+<img id="hn" style="position:absolute; left:395px; top:65px; visibility:hidden; cursor:pointer;" src="images/hn.png"/>
+<img id="hn2" style="position:absolute; left:400.5px; top:95px; visibility:hidden;" src="images/hn2.png"/>
+
+</div>
+
+
+<!--Step3-->
+<div class="simsubscreen" id="canvas3" style="visibility:hidden">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;3&nbsp;</span>
+<p class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Fill the Vicat mould resting upon non-porous plate.</p>
+
+<img id="cement1" style="position: absolute; left: 127px; top: 297.5px; visibility:hidden;" src="images/cement.png"/>
+<img id="p4" style="position: absolute; left: 61px; top: 280.25px; cursor:move; visibility:hidden;" src="images/plate2.png"/>
+<img id="p5" style="position: absolute; left: 61px; top: 280.25px; cursor:move; visibility:hidden;" src="images/plate3.png"/>
+
+<img id="mould1" style="position:absolute; left:350px; top:250px; visibility:hidden;" src="images/mould1.png"/>
+<img id="mould2" style="position:absolute; left:350px; top:250px; visibility:hidden;" src="images/mould2.png"/>
+<img id="mould3" style="position:absolute; left:350px; top:250px; visibility:hidden;" src="images/mould3.png"/>
+
+<img id="shaker" style="position:absolute; left:20px; top:135px; visibility:hidden; cursor:pointer;" src="images/shaker.png"/>
+<img id="shaker3" style="position:absolute; left: 75px; top: 249px; visibility:hidden;" src="images/shaker3.png"/>
+<img id="shaker4" style="position:absolute; left:375px; top:180px; visibility:hidden;" src="images/shaker3.png"/>
+<img id="shaker5" style="position:absolute; left:50px; top:249px; visibility:hidden;" src="images/shaker3.png"/>
+</div>
+
+
+
+<!--Step4	-->
+<div class="simsubscreen" id="canvas4" style="visibility:hidden;">
+<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;4&nbsp;</span>
+<p class="steptext" style="font-family:verdana; font-size:14px;" >&nbsp;Fix the 1mm<sup>2</sup> Vicat plunger and the place the mould under the test setup.</p>
+<img id="setup4-1" style="position: absolute; left: 151px; top: 75px; " src="images/pic2.png"/>
+<img id="setup4-2" style="position: absolute; left: 194px; top: 270px; " src="images/pic1.png"/>
+<img id="setup" style="position: absolute; left: 121px; top: 160px; " src="images/setup2.png"/>
+<img id="setup4-3" style="position: absolute; left: 208px; top: 180px; " src="images/pic3.png"/>
+<img id="setup4-4" style="position: absolute; left: 185.5px; top: 220px; " src="images/pic4.png"/>
+<img id="hnd2" style="position: absolute; left: 56px; top: 315px; visibility:hidden; " src="images/hnd2.png"/>
+<img id="screw" style="position:absolute; left:227.50px; top: 307px; cursor:pointer;" src="images/screw.png" />
+<img id="mould4" style="position:absolute; left:370px; top:250px; " src="images/mould4.png"/>
+<img id="mould4-1" style="position:absolute; left:77.5px; top:380px; visibility:hidden;" src="images/mould4.png"/>
+<img id="setup4-5" style="position: absolute; left: 194px; top: 318px; visibility:hidden;" src="images/pic5.png"/>
+<p id="stat1" style="position: absolute; left:380px; top:220px;font-family:verdana; font-size:16px; visibility:hidden;">Initial Reading = 40mm</p>
+</div>
+
+
+<!--Step5	-->
+<div class="simsubscreen" id="canvas5" style="visibility:hidden">
+<strong class="incanvas" id="step5">STEP &nbsp;</strong><span class="circlebg" id="step5-1">&nbsp;5&nbsp;</span>
+<p class="steptext" id="step5-2" style="font-family:verdana; font-size:14px;" >&nbsp;Lower the plunger to touch the surface of the mould and release it quickly to sink into the paste.</p>
+<img id="setup5-1" style="position: absolute; left: 231px; top: 85px; " src="images/pic2.png"/>
+<img id="setup5-6" style="position: absolute; left: 288px; top: 181px; visibility:hidden;" src="images/pic3.png"/>
+<img id="setup5" style="position: absolute; left: 201px; top: 160px; " src="images/setup2.png"/>
+<img id="setup5-3" style="position: absolute; left: 288px; top: 180px; cursor:pointer;" src="images/pic3.png"/>
+<img id="setup5-4" style="position: absolute; left: 265.5px; top: 231.5px; " src="images/pic4.png"/>
+<img id="hnd5" style="position: absolute; left: 106px; top: 315px; visibility:hidden; " src="images/hnd2.png"/>
+<img id="screw5" style="position:absolute; left:307.50px; top: 307px; cursor:pointer;" src="images/screw.png" />
+<img id="mould5-1" style="position:absolute; left:160.5px; top:380px; " src="images/mould4.png"/>
+<img id="setup5-5" style="position: absolute; left: 274px; top: 318px; " src="images/pic5.png"/>
+<img id="mould5-2" style="position: absolute; left: 158px; top: 318px; visibility:hidden;" src="images/mould5.png"/>
+<img id="meter5" style="position:absolute; left:500px; top:170px; visibility:hidden;" src="images/meter.png" />
+<img id="pic6" style="position:absolute; left:532.5px; top:222.5px; visibility:hidden;" src="images/pic6.png" />
+<img id="hg5" style="position:absolute; left: 420px; top: 155px; visibility:hidden;" src="images/hookgauge.png" />
+<p id="stat2" style="position: absolute; left:435px; top:415px; font-family:verdana; font-size:16px; visibility:hidden;">Final Reading = </p>
+</div>
+
+<!--Step6	-->
+<div class="simsubscreen" id="canvas6" style="visibility:hidden">
+<h3 id="step6-1" style="font-family:verdana;">Observation and Results:</h3>
+<p class="stepfont" id="can6-3" style="position:absolute; top:100px; left:100px">Quantity of water added = ml</p>
+<p class="stepfont" id="can6-1" style="position:absolute; top:150px; left:100px">Initial Reading = 40mm</p>
+<p class="stepfont" id="can6-2" style="position:absolute; top: 200px; left:100px">Final Reading = </p>
+
+<h2 id="66-1" style="position:absolute; left:-10px; top:200px; color:black; display:none; text-align:center;">Repeat the the sampe procedure for 30% and 32% of water</h2>
+
+<table id="tab" border size=1 style="visibility:hidden; font-family:verdana; font-size:14px; position:absolute; top:50px;">
+<caption style="text-align:left; font-family:verdana; font-size:14px;  padding:5px; margin: 8px 0;">Weight of the Cement taken  = 300g</caption>
+<tr>
+    <th style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">Percentage of Water</th>
+	<th style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">Initial Reading (mm)</th>
+    <th style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">Final Reading (mm)</th>
+</tr>
+
+<tr>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">26</td>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">40</td>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">28</td>
+</tr>
+
+<tr>
+	<td style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0; ">28</td>
+	<td style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">40</td>
+	<td style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">19</td>
+</tr>
+
+<tr>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">30</td>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">40</td>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">11</td>
+</tr>
+
+<tr>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">32</td>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">40</td>
+    <td style="text-align:center; font-family:verdana; font-size:14px; padding: 5px; margin: 8px 0;">6</td>
+</tr>
+</table>
+
+<div id="inferenceDiv" style="position:absolute; left:10px; top:225px; visibility:hidden;">
+<strong class="incanvas" id="ob" ><h3>Inference: </h3></strong>
+<div id="inference" style=" background-color:grey; color:white; padding:7.5px; border-radius:5px; text-align:justify;">
+<p>The percentage of water required for the given sample to</br> be in acceptable range of Standard Consistency is</p>
+<input type="radio" name="inf" value="1">&nbsp;26</br>
+<input type="radio" name="inf" value="2">&nbsp;28</br>
+<input type="radio" name="inf" value="3">&nbsp;30</br>
+<input type="radio" name="inf" value="4">&nbsp;32</br></br>
+<input type="button" value="Submit" onclick="checkInference();"/>
+<p id="ans" style="visibility:hidden;"></p>
+</div>
+</div>
+<p id="infAns" style="display:none; font-weight:bold; position:absolute; left:10px; top:290px; text-align:justify; width:675px;"></p>
+
+</div>
+
+<div id="questDiv" style="position:absolute; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:hidden; text-align:justify;">
+<p id="q"></p><select id="answer" >
+</select>
+<p id="a"></p>
+</div>
+
+<div id="">
+<p id="trial" style="text-transform: uppercase;visibility :hidden;font-weight: bold;font-family:verdana; font-size:14px;"><strong>Trial = </strong></p>
+</div>
+
+
+<!--next  Arrow	-->
+<div id="nav">
+	<img id="nextButton" onclick="navNext(); " src="images/Next.png" />
+</div>
+
+
+<!--Blinking Arrow	-->
+<img class ="" id="arrow1" style="visibility:hidden;" src="images/arrow1.png"/>
+
+<div id="copyright"> &copy; 2016 - <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
+
+</body>
+</html>

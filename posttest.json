@@ -1,0 +1,46 @@
+[{
+	"question": "Standard consistency of the cement is ",
+	"answers": {
+		"a": "Consistency in which the needle penetrate to a point 5mm to 7mm from the bottom of mould.",
+		"b": "Consistency in which the needle penetrate to a point 5mm to 7mm from the top of mould.",
+		"c": "Consistency in which the needle penetrate to a point 25 mm from the bottom of mould.",
+		"d": "None of the above."
+	},
+	"correctAnswer": "a"
+}, {
+	"question": "IS Standard for determination of consistency of standard cement paste is",
+	"answers": {
+		"a": "IS 4031 (Part 1) : 1988",
+		"b": "IS 4031 (Part 2) : 1988",
+		"c": "IS 4031 (Part 3) : 1988",
+		"d": "IS 4031 (Part 4) : 1988"
+	},
+	"correctAnswer": "d"
+}, {
+	"question": "Select the correct one!<br>The gauging time of the paste should not be <br>1.less than 5 minutes<br>2.more than 5 minutes<br>3.less than 3 minutes",
+	"answers": {
+		"a": "only 2",
+		"b": "2 and 3",
+		"c": "1 and 2",
+		"d": "only 3"
+	},
+	"correctAnswer": "b"
+}, {
+	"question": "The diameter of the plunger used for testing standard consistency of the cement is",
+	"answers": {
+		"a": "1mm",
+		"b": "5mm",
+		"c": "10mm",
+		"d": "None of the above"
+	},
+	"correctAnswer": "c"
+}, {
+	"question": "The specified temperature and humidity for conducting consistency test is",
+	"answers": {
+		"a": "27±2&deg;C and 65±5%",
+		"b": "27±2&deg;C and 90%",
+		"c": "29±2&deg;C and 65±5%",
+		"d": "29±2&deg;C and 90%"
+	},
+	"correctAnswer": "d"
+}]
