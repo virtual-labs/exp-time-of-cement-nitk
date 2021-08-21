@@ -18,8 +18,6 @@ function navNext()
      magic();
 }
 
-
-
 var ca;
 var questions=["The gauging time should be ___________ .",
 				"Standard Vicat Plunger Surface Area is ______ mm<sup>2</sup>.",
@@ -67,8 +65,6 @@ function validateAnswer(qn,ans,left,top)
 		});
 	}
 }
-
-
 
 //-----------------------------------------blink arrow on the next step---------------------------------------------
 //blink arrow on the next step
