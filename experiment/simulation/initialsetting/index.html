@@ -2,7 +2,6 @@
 <html lang="en-US">
 <head>
 <meta charset="UTF-8">
-
 <title>SOLVE</title>
 <link rel="stylesheet" href="css/istc.css" />
 <link rel="stylesheet" href="css/mathstyle.css" />
@@ -11,7 +10,6 @@
 <!-- <script type="text/javascript" src= "jquery-2.1.4.js"></script> -->
 <!-- <script type="text/javascript" src= "ej.web.all.js"></script> -->
 <!-- <script type="text/javascript" src="/assets/script/canvasjs.min.js"></script> -->
-
 <script>
 var simsubscreennum=0;
 var temp=0;
@@ -51,88 +49,43 @@ var lnt=0;
 }
 </style>
 </head>
-
-
-
 <body style="margin:0; font-family:Verdana; font-size:14px;">
-<!--Simulation Screen start		-->
 <div id="simscreen">
-
 <img id="swh" style="position: absolute; left: 650px; top: 85px;cursor:move;visibility:hidden;" src="images/swh.png"/>
 <img id="ndl" style="position: absolute; left: 704px; top:156px;cursor:move;visibility:hidden;" src="images/nd.png"/>
 
-
-
-<!--Title of Simulation		-->
 <div id="title"><h3>Initial Setting Time of cement</h3></div>
-
-
-
-<!--SubScreen Home	-->
-<div class="simsubscreen" id="canvas0">
-<h4 class="incanvas" style="font-family:verdana;" >Objective</h4>
-<p class="incanvas" style="font-family:verdana; font-size:14px;">To determine the initial setting time of given cement sample by Vicat apparatus.</p></br>
-<h4 class="incanvas" style="font-family:verdana;">Apparatus used:</h4>
-<p class="incanvas" style="font-family:verdana; font-size:14px;" >Vicat apparatus with Vicat plunger, Vicat mould, Glass plate, Measuring jar, Weighing scale, Trowel etc.</p>
-
-&nbsp;<span class="tooltip" style="border-bottom:1px dotted ; color:red; position:absolute; top:130px;"><strong>Description</strong>
-<span  class="tooltiptext" style=" text-align:justify;"><strong style="color:red;">Initial Setting Time</strong> is the time elapsed between the moment the water is added to the cement sample and the time at which the cement paste starts losing plasticity.</span></span>
-
-<img id="" style="position: absolute; left: 410px; top: 405px; width:150px;" title="Weighing scale" src="images/ewm.png"/>
-<img style="position:absolute; left:50px; top:170px;" title="" src="images/human.png" />
-<img id="" style="position: absolute; left: 225px; top:370px; width:90px;" title="Vicat apparatus" src="images/1st.png"/>
-
+	<div class="simsubscreen" id="canvas0">
+	<h4 class="incanvas" style="font-family:verdana;" >Objective:</h4>
+	<p class="incanvas" style="font-family:verdana; font-size:14px;">To determine the initial setting time of given cement sample by Vicat apparatus.</p></br>
+	<h4 class="incanvas" style="font-family:verdana;">Apparatus used:</h4>
+	<p class="incanvas" style="font-family:verdana; font-size:14px;" >Vicat apparatus with Vicat plunger, Vicat mould, Glass plate, Measuring jar, Weighing scale, Trowel etc.</p>
+	&nbsp;<span class="tooltip" style="border-bottom:1px dotted ; color:red; position:absolute; top:130px;"><strong>Description</strong>
+	<span  class="tooltiptext" style=" text-align:justify;"><strong style="color:red;">Initial Setting Time</strong> is the time elapsed between the moment the water is added to the cement sample and the time at which the cement paste starts losing plasticity.</span></span>
+	<img id="" style="position: absolute; left: 410px; top: 405px; width:150px;" title="Weighing scale" src="images/ewm.png"/>
+	<img style="position:absolute; left:50px; top:170px;" title="" src="images/human.png" />
+	<img id="" style="position: absolute; left: 225px; top:370px; width:90px;" title="Vicat apparatus" src="images/1st.png"/>
 </div>
 
-<!--Step1	-->
 <div class="simsubscreen" id="canvas1" style="visibility:hidden">
-<strong id="titlestep" class="incanvas">STEP </strong>
-<span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
-
-<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Take cement in a pan and measure 300g of cement using the weighing scale.</p>
-
-<img id="" style="position: absolute; left: 230px; top: 255px;" src="images/ewm1.png"/>
-<img id="mw" style="position: absolute; left: 310px; top: 342px;visibility:hidden" src="images/mw.PNG"/>
-<img id="hp2-1" style="position: absolute; left:2px; top: 90px;visibility:hidden;" src="images/hp.png"/>
-
-
-
-<img id="p2" style="position: absolute; left: 251px; top: 212.25px;cursor:move;visibility:hidden" src="images/plate.png"/>
-
- <img id="wc" style="position: absolute; left: 320px; top: 230px;visibility:hidden" src="images/cem11.png"/>
-
-<img id="p3" style="position: absolute; left: 251px; top: 212.25px;cursor:move;visibility:hidden" src="images/plate.png"/>
-
-
-
-<img id="pwc" style="position: absolute; left:368px; top:166px;visibility:hidden" src="images/cemp.png"/>
-
-
-<img id="swc2"  style="position: absolute; visibility: hidden; left: 450px; top: 130px;" src="images/cem12.png"/>
-
-<img id="hand"  style="position: absolute; visibility: hidden; left: 420px; top: 65px;" src="images/pour.png"/>
-
-
-
-<img id="on2-1" style="position: absolute; left:300px; top: 380px;cursor:pointer;" src="images/on.png"/>
-<img id="off2-1" style="position: absolute; left: 330px; top: 380px;cursor:pointer;" src="images/off.png"/>
-<img id="zero2-1" style="position: absolute; left: 360px; top: 380px;cursor:pointer;" src="images/zero.png"/>
-<img id="tare2-1" style="position: absolute; left: 390px; top: 380px;cursor:pointer;" src="images/tare2.png"/>
-
-<img id="on2-2" style="position: absolute; left:295px; top: 380px;visibility:hidden;cursor:pointer;" src="images/onblue.png"/>
-<img id="on2-3" style="position: absolute; left:300px; top: 380px;visibility:hidden;cursor:pointer;" src="images/on.png"/>
-
-
-<img id="tare2-3" style="position: absolute; left: 390px; top: 380px;visibility:hidden;cursor:pointer; " src="images/tare2.png"/>
-
-<img id="tare2-2" style="position: absolute; left: 385px; top: 380px;visibility:hidden;cursor:pointer; " src="images/tare3.png"/>
-
-<!-- <img id="onarm"  style="margin-left: -50px; margin-top: -50px; position: absolute; visibility: hidden; left: 689px; top: 215px;" src="images/hand.png">  -->
-
-
-<p id="v2-1" style="position:absolute;left: 342px; top:330px;visibility:hidden;font-family:verdana; font-size:14px;">00.00   g</p>
-<p id="v2-2" style="position:absolute;left: 326px; top:330px;visibility:hidden;font-family:verdana; font-size:14px;">300.00   g</p>
-
+	<strong id="titlestep" class="incanvas">STEP </strong>
+	<span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
+	<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Take cement in a pan and measure 300g of cement using the weighing scale.</p>
+	<img id="" style="position: absolute; left: 230px; top: 255px;" src="images/ewm1.png"/>
+	<img id="mw" style="position: absolute; left: 310px; top: 342px;visibility:hidden" src="images/mw.PNG"/>
+	<img id="hp2-1" style="position: absolute; left:2px; top: 90px;visibility:hidden;" src="images/hp.png"/>
+	<img id="p2" style="position: absolute; left: 251px; top: 212.25px;cursor:move;visibility:hidden" src="images/plate.png"/>
+	<img id="wc" style="position: absolute; left: 320px; top: 230px;visibility:hidden" src="images/cem11.png"/>
+	<img id="p3" style="position: absolute; left: 251px; top: 212.25px;cursor:move;visibility:hidden" src="images/plate.png"/>
+	<img id="pwc" style="position: absolute; left:368px; top:166px;visibility:hidden" src="images/cemp.png"/>
+	<img id="swc2" style="position: absolute; visibility: hidden; left: 450px; top: 130px;" src="images/cem12.png"/>
+	<img id="hand" style="position: absolute; visibility: hidden; left: 420px; top: 65px;" src="images/pour.png"/>
+	<img id="on1" style="position: absolute; left:290px; top: 375px; cursor:pointer; " src="images/onBtn.png"/>
+	<img id="off1" style="position: absolute; left: 326px; top: 375px;" src="images/offBtn.png"/>
+	<img id="zero1" style="position: absolute; left: 362.5px; top: 375px;" src="images/zeroBtn.png"/>
+	<img id="tare1" style="position: absolute; left: 400px; top: 375px; cursor:pointer; " src="images/tareBtn.png"/>
+	<p id="v2-1" style="position:absolute;left: 342px; top:332px;visibility:hidden;font-family:verdana; font-size:14px;">0.000 g</p>
+	<p id="v2-2" style="position:absolute;left: 326px; top:332px;visibility:hidden;font-family:verdana; font-size:14px;">300.00 g</p>
 </div>
 
 
@@ -198,194 +151,150 @@ var lnt=0;
 <img id="tapi3" style="position: absolute; left: 80px; top:295px;" src="images/tapi1.png"/>
  </div>
 
-<!--Step4	-->
 <div class="simsubscreen" id="canvas4" style="visibility:hidden">
-<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;4&nbsp;</span>
-<p class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Fill the cement paste into the Vicat mould and smooth of the surface.</p>
-<img id="cwc1" style="position: absolute; left: 160px; top:355px;cursor:move;" src="images/cw11.png"/>
-<img id="cwc2" style="position: absolute; left: 160px; top:355px;cursor:move;visibility:hidden" src="images/tcw.png"/>
+	<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;4&nbsp;</span>
+	<p class="steptext" style="font-family:verdana; font-size:14px;">&nbsp;Fill the cement paste into the Vicat mould and smooth of the surface.</p>
+	<img id="cwc1" style="position: absolute; left: 160px; top:355px;cursor:move;" src="images/cw11.png"/>
+	<img id="cwc2" style="position: absolute; left: 160px; top:355px;cursor:move;visibility:hidden" src="images/tcw.png"/>
+	<img id="md1" style="position: absolute; left: 411px; top: 290px;" src="images/md.png"/>
+	<img id="md2" style="position: absolute; left: 411px; top: 290px;visibility:hidden" src="images/md1.png"/>
+	<img id="md3" style="position: absolute; left: 411px; top: 290px;visibility:hidden;" src="images/md3.png"/>
+	<img id="pc4" style="position: absolute; left: 131px;  top: 342.25px;" src="images/plate.png"/>
+	<img id="tp1" style="position: absolute; left: 110px;  top: 200px;cursor:move;" src="images/tp1.png"/>
+	<img id="tp2" style="position: absolute; left: 415px; top:230px;cursor:move;visibility:hidden" src="images/tp1.png"/>
+	<img id="tc1" style="position: absolute; left: 160px; top:300px;cursor:move;visibility:hidden" src="images/tc.png"/>
+	<img id="tc2" style="position: absolute; left: 160px; top:300px;cursor:move;visibility:hidden" src="images/tc.png"/>
+	<img id="tc3" style="position: absolute; left: 415px; top:230px;cursor:move;visibility:hidden" src="images/tc.png"/>
+</div>
 
-
-
-<img id="md1" style="position: absolute; left: 411px; top: 290px;" src="images/md.png"/>
-<img id="md2" style="position: absolute; left: 411px; top: 290px;visibility:hidden" src="images/md1.png"/>
-<img id="md3" style="position: absolute; left: 411px; top: 290px;visibility:hidden;" src="images/md3.png"/>
-
-<img id="pc4" style="position: absolute; left: 131px;  top: 342.25px;" src="images/plate.png"/>
-<img id="tp1" style="position: absolute; left: 110px;  top: 200px;cursor:move;" src="images/tp1.png"/>
-<img id="tp2" style="position: absolute; left: 415px; top:230px;cursor:move;visibility:hidden" src="images/tp1.png"/>
-
-<img id="tc1" style="position: absolute; left: 160px; top:300px;cursor:move;visibility:hidden" src="images/tc.png"/>
-<img id="tc2" style="position: absolute; left: 160px; top:300px;cursor:move;visibility:hidden" src="images/tc.png"/>
-<img id="tc3" style="position: absolute; left: 415px; top:230px;cursor:move;visibility:hidden" src="images/tc.png"/>
-
-
- </div>
-
-<!--Step5	-->
 <div class="simsubscreen" id="canvas5" style="visibility:hidden;">
-<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;5&nbsp;</span>
-<p class="steptext" style="font-family:verdana; font-size:14px;" >&nbsp;Lower the plunger to touch the surface of the mould and release it quickly to sink into the paste.</p>
-<img id="ln" style="position: absolute;left: 114px; top: 64px;" src="images/ln.png"/>
-<img id="ln22" style="position: absolute;left: 114px; top: 74px;visibility:hidden;" src="images/ln.png"/>
-<img id="ln33" style="position: absolute;left: 114px; top: 78px;visibility:hidden;" src="images/ln.png"/>
+	<strong class="incanvas">STEP &nbsp;</strong><span class="circlebg">&nbsp;5&nbsp;</span>
+	<p class="steptext" style="font-family:verdana; font-size:14px;" >&nbsp;Lower the plunger to touch the surface of the mould and release it quickly to sink into the paste.</p>
+	<img id="ln" style="position: absolute;left: 114px; top: 64px;" src="images/ln.png"/>
+	<img id="ln22" style="position: absolute;left: 114px; top: 74px;visibility:hidden;" src="images/ln.png"/>
+	<img id="ln33" style="position: absolute;left: 114px; top: 78px;visibility:hidden;" src="images/ln.png"/>
+	<img id="mc" style="position: absolute;left: 55px; top: 120px;" src="images/mc.png"/>
+	<img id="nb" style="position: absolute;left: 163px; top: 153px;" src="images/nb.png"/>
+	<img id="arw" style="position: absolute;left: 130px; top: 193px;" src="images/arw.PNG"/>
+	<img id="ndl5" style="position: absolute;left: 40.5px; top: 330px;visibility:hidden;" src="images/ndl.png"/>
+	<img id="scw" style="position: absolute;left: 170.5px; top: 299px; cursor:pointer;visibility:hidden;" src="images/scw.PNG"/>
+	<img id="md4" style="position: absolute; left: 411px; top: 310px;" src="images/md4.png"/>
+	<img id="md41" style="position: absolute; left: 12px; top: 382px;visibility:hidden;" src="images/md4.png"/>
+	<img id="ln2" style="position: absolute;left: 142.50px; top: 320px;visibility:hidden;" src="images/ln3.png"/>
+	<img id="ln3" style="position: absolute;left: 142.25px; top: 328px;visibility:hidden;" src="images/ln2.png"/>
+	<img id="zmc1" style="position: absolute; left: 358px; top: 135px;visibility:hidden;" src="images/zmc.png"/>
+	<img id="nwrd1" style="position: absolute; left: 360px; top: 130px;visibility:hidden;" src="images/nwrd.png"/>
+	<img id="zmv1" style="position: absolute;  left: 415px; top: 200px;visibility:hidden;" src="images/zmv.png"/>
+	<p id="init" style="font-family:verdana; font-size:14px;position: absolute;  left: 398px; top: 405px;visibility:hidden;"> Initial Reading = 40mm </p>
+</div>
 
-<img id="mc" style="position: absolute;left: 55px; top: 120px;" src="images/mc.png"/>
-
-<img id="nb" style="position: absolute;left: 163px; top: 153px;" src="images/nb.png"/>
-
-<img id="arw" style="position: absolute;left: 130px; top: 193px;" src="images/arw.PNG"/>
-
-<img id="ndl5" style="position: absolute;left: 40.5px; top: 330px;visibility:hidden;" src="images/ndl.png"/>
-
-<img id="scw" style="position: absolute;left: 170.5px; top: 299px; cursor:pointer;visibility:hidden;" src="images/scw.PNG"/>
-
-<img id="md4" style="position: absolute; left: 411px; top: 310px;" src="images/md4.png"/>
-<img id="md41" style="position: absolute; left: 12px; top: 382px;visibility:hidden;" src="images/md4.png"/>
-
-<img id="ln2" style="position: absolute;left: 142.50px; top: 320px;visibility:hidden;" src="images/ln3.png"/>
-<img id="ln3" style="position: absolute;left: 142.25px; top: 328px;visibility:hidden;" src="images/ln2.png"/>
-
-<img id="zmc1" style="position: absolute; left: 358px; top: 135px;visibility:hidden;" src="images/zmc.png"/>
-<img id="nwrd1" style="position: absolute; left: 360px; top: 130px;visibility:hidden;" src="images/nwrd.png"/>
-<img id="zmv1" style="position: absolute;  left: 415px; top: 200px;visibility:hidden;" src="images/zmv.png"/>
-
-<p id="init" style="font-family:verdana; font-size:14px;position: absolute;  left: 398px; top: 405px;visibility:hidden;"> Initial Reading = 40mm </p>
-
-<!-- <p id="v4" style="position:absolute;left: 290px; top:250px;visibility:hidden;font-family:verdana; font-size:14px;">Adjust the screw</p> -->
-
- </div>
-<!--Step6	-->
 <div class="simsubscreen" id="canvas6" style="visibility:hidden">
-<strong id="step6" class="incanvas">STEP &nbsp;</strong>
-<span class="circlebg" id="six">&nbsp;6&nbsp;</span>
-<p  id="step6-1" class="steptext" style="font-family:verdana; font-size:14px;">Measure the penetration of the needle for every 5 minutes till the penetration from the top is about 33 to 35mm.</p>
-
-
-<img id="ln61" style="position: absolute;left: 114px; top: 74px;" src="images/ln.png"/>
-<img id="ln62" style="position: absolute;left: 114px; top: 78px;visibility:hidden;" src="images/ln.png"/>
-
-<img id="mc6" style="position: absolute;left: 55px; top: 120px;" src="images/mc.png"/>
-
-<img id="nb6" style="position: absolute;left: 163px; top: 153px;" src="images/nb.png"/>
-
-<img id="arw6" style="position: absolute;left: 130px; top: 196px;" src="images/arw.PNG"/>
-
-
-<img id="onarm6" style="margin-left: -50px; margin-top: -50px; position: absolute;left:2px; top: 110px;visibility:hidden;"src="images/hnd.png"/>
-
-
-<!-- <img id="ndl6" style="position: absolute;left: 40.5px; top: 330px;visibility:hidden;" src="images/ndl.png"/>   -->
-
-<img id="scw6" style="position: absolute;left: 170.5px; top: 299px; cursor:pointer;visibility:hidden;" src="images/scw.PNG"/>
-
-<img id="md61" style="position: absolute; left: 12px; top: 382px;" src="images/md4.png"/>
-
-<img id="ln63" style="position: absolute;left: 142.50px; top: 320px;" src="images/ln3.png"/>
-<img id="ln64" style="position: absolute;left: 142.25px; top: 328px;visibility:hidden;" src="images/ln2.png"/>
-
-
-<img id="zmc6" style="position: absolute; left: 358px; top: 135px;visibility:hidden;" src="images/zmc.png"/>
-<img id="nwrd6" style="position: absolute; left: 360px; top: 130px;visibility:hidden;" src="images/nwrd.png"/>
-<img id="zmv6" style="position: absolute;  left: 415px; top: 282px;visibility:hidden;" src="images/zmv.png"/>
-
-<p id="final" style="font-family:verdana; font-size:14px;position: absolute;  left: 398px; top: 405px;visibility:hidden;"> Final Reading = 0mm </p>
-<p id="final1" style="font-family:verdana; font-size:14px;position: absolute;  left: 398px; top: 405px;visibility:hidden;"> Final Reading = 0mm </p>
-<p id="final3" style="font-family:verdana; font-size:14px;position: absolute;  left: 398px; top: 405px;visibility:hidden;"> Final Reading = 0mm </p>
-<p id="final4" style="font-family:verdana; font-size:14px;position: absolute;  left: 398px; top: 405px;visibility:hidden;"> Final Reading = 1mm </p>
-<!-- <p id="final5" style="font-family:verdana; font-size:14px;position: absolute;  left: 398px; top: 405px;visibility:hidden;"> Final Reading = 5mm </p> -->
-
-<img id="5"  style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/5m.png"/>
-<img id="10" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/10.png"/>
-<img id="15" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/15.png"/>
-<img id="20" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/20.png"/>
-<img id="25" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/25.png"/>
-<img id="30" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/30.png"/>
-<img id="35" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/35.png"/>
-<img id="40" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/40m.png"/>
-<img id="45" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/45.png"/>
-
-
+	<strong id="step6" class="incanvas">STEP &nbsp;</strong>
+	<span class="circlebg" id="six">&nbsp;6&nbsp;</span>
+	<p  id="step6-1" class="steptext" style="font-family:verdana; font-size:14px;">Measure the penetration of the needle for every 5 minutes till the penetration from the top is about 33 to 35mm.</p>
+	<img id="ln61" style="position: absolute;left: 114px; top: 74px;" src="images/ln.png"/>
+	<img id="ln62" style="position: absolute;left: 114px; top: 78px;visibility:hidden;" src="images/ln.png"/>
+	<img id="mc6" style="position: absolute;left: 55px; top: 120px;" src="images/mc.png"/>
+	<img id="nb6" style="position: absolute;left: 163px; top: 153px; cursor:pointer;" src="images/nb.png"/>
+	<img id="arw6" style="position: absolute;left: 130px; top: 196px;" src="images/arw.PNG"/>
+	<img id="scw6" style="position: absolute;left: 170.5px; top: 299px; cursor:pointer;visibility:hidden;" src="images/scw.PNG"/>
+	<img id="md61" style="position: absolute; left: 12px; top: 382px;" src="images/md4.png"/>
+	<img id="ln63" style="position: absolute;left: 142.50px; top: 320px;" src="images/ln3.png"/>
+	<img id="ln64" style="position: absolute;left: 142.25px; top: 328px;visibility:hidden;" src="images/ln2.png"/>
+	<img id="zmc6" style="position: absolute; left: 358px; top: 135px;visibility:hidden;" src="images/zmc.png"/>
+	<img id="nwrd6" style="position: absolute; left: 360px; top: 130px;visibility:hidden;" src="images/nwrd.png"/>
+	<img id="zmv6" style="position: absolute;  left: 415px; top: 282px;visibility:hidden;" src="images/zmv.png"/>
+	<p id="final" style="font-family:verdana; font-size:14px;position: absolute;  left: 398px; top: 405px;visibility:hidden;"> Final Reading = 0mm </p>
+	<p id="final1" style="font-family:verdana; font-size:14px;position: absolute;  left: 398px; top: 405px;visibility:hidden;"> Final Reading = 0mm </p>
+	<p id="final3" style="font-family:verdana; font-size:14px;position: absolute;  left: 398px; top: 405px;visibility:hidden;"> Final Reading = 0mm </p>
+	<p id="final4" style="font-family:verdana; font-size:14px;position: absolute;  left: 398px; top: 405px;visibility:hidden;"> Final Reading = 1mm </p>
+	<img id="5"  style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/5m.png"/>
+	<img id="10" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/10.png"/>
+	<img id="15" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/15.png"/>
+	<img id="20" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/20.png"/>
+	<img id="25" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/25.png"/>
+	<img id="30" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/30.png"/>
+	<img id="35" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/35.png"/>
+	<img id="40" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/40m.png"/>
+	<img id="45" style="position: absolute; left: 600px; top: 35px;cursor:move;visibility:hidden;" src="images/45.png"/>
 </div>
 
-<!--Step7	-->
 <div class="simsubscreen" id="canvas7" style="visibility:hidden">
-<strong id="step7" class="incanvas">STEP &nbsp;</strong>
-<span class="circlebg" id="six">&nbsp;7&nbsp;</span>
-<p  id="step7-1" class="steptext" style="font-family:verdana; font-size:14px;">Observation and Results:</p>
-<p id="final11" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 100px;"> Time = 5min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 0mm </p>
-<p id="final22" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 90px;visibility:hidden;"> Time = 10min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 0mm </p>
-<p id="final33" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 90px;visibility:hidden;"> Time = 15min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 0mm </p>
-<p id="final44" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 90px;visibility:hidden;"> Time = 20min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 1mm </p>
-<!-- <p id="final55" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 90px;visibility:hidden;"> Time = 25min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 0mm </p> -->
-<!-- <p id="final66" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 90px;visibility:hidden;"> Time = 30min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 1mm </p> -->
-<!-- <p id="final77" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 90px;visibility:hidden;"> Time = 35min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 3mm </p> -->
-<!-- <p id="final88" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 90px;visibility:hidden;"> Time = 40min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 4mm </p> -->
-<!-- <p id="final99" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 90px;visibility:hidden;"> Time = 45min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 5mm </p> -->
-<br>
-<table id="table" border size=1 style="visibility:hidden;font-family:verdana; font-size:14px;">
-<tr>
-    <th style="text-align:center;font-family:verdana; font-size:14px;">Sl.No</th>
-    <th style="text-align:center;font-family:verdana; font-size:14px;">Time(min)</th>
-    <th style="text-align:center;font-family:verdana; font-size:14px;">Penetration(mm)</th>
-</tr>
-
- <tr><td style="text-align:center;font-family:verdana; font-size:14px;">1</td>
-    <td style="text-align:center;font-family:verdana; font-size:14px;">5</td>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">0</td>
-</tr>
-<tr>
-    <td style="text-align:center;font-family:verdana; font-size:14px;">2</td>
-    <td style="text-align:center;font-family:verdana; font-size:14px;">10</td>
-    <td style="text-align:center;font-family:verdana; font-size:14px;">0</td>
-</tr>
-<tr>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">3</td>
-    <td style="text-align:center;font-family:verdana; font-size:14px;">15</td>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">0</td>
-</tr>
-<tr>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">4</td>
-    <td style="text-align:center;font-family:verdana; font-size:14px;">20</td>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">1</td>
-</tr><tr>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">5</td>
-    <td style="text-align:center;font-family:verdana; font-size:14px;">25</td>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">2</td>
-</tr><tr>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">6</td>
-    <td style="text-align:center;font-family:verdana; font-size:14px;">30</td>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">3</td>
-</tr><tr>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">7</td>
-    <td style="text-align:center;font-family:verdana; font-size:14px;">35</td>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">4</td>
-</tr><tr>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">8</td>
-    <td style="text-align:center;font-family:verdana; font-size:14px;">40</td>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">4</td>
-</tr><tr>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">9</td>
-    <td style="text-align:center;font-family:verdana; font-size:14px;">45</td>
-	<td style="text-align:center;font-family:verdana; font-size:14px;">5</td>
-</tr>
-
-</table>
-<h2 id="rs" style="position:absolute; left:-20px; top:150px; color:black; visibility:hidden; text-align:center;">Repeat for different positions on the mould until the plunger stops penetrating 5mm from the bottom of the mould.</h2>
-
-<div id="inferenceDiv" style="position:absolute; left:460px; top:80px; visibility:hidden;">
-<strong class="incanvas" id="ob" ><h3>Inference: </h3></strong>
-<div id="inference" style="  background-color:grey; color:white; padding:8.5px; border-radius:5px; font-family:verdana;">
-<p>Initial setting time of cement is</p>
-<input type="radio" name="inf" value="1">&nbsp;30</br>
-<input type="radio" name="inf" value="2">&nbsp;35</br>
-<input type="radio" name="inf" value="3">&nbsp;40</br>
-<input type="radio" name="inf" value="4">&nbsp;45</br></br>
-<input type="button" value="Submit" onclick="checkInference();"/>
-<p id="ans" style="visibility:hidden;"></p>
+	<strong id="step7" class="incanvas">STEP &nbsp;</strong>
+	<span class="circlebg" id="six">&nbsp;7&nbsp;</span>
+	<p  id="step7-1" class="steptext" style="font-family:verdana; font-size:14px;">Observation and Results:</p>
+	<p id="final11" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 100px;"> Time = 5min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 0mm </p>
+	<p id="final22" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 90px;visibility:hidden;"> Time = 10min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 0mm </p>
+	<p id="final33" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 90px;visibility:hidden;"> Time = 15min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 0mm </p>
+	<p id="final44" style="font-family:verdana; font-size:14px;position: absolute;  left: 110px; top: 90px;visibility:hidden;"> Time = 20min<br/><br/><br/><br/>Initial Reading = 40mm <br/><br/><br/><br/>Final Reading = 1mm </p>
 </div>
+
+<div class="simsubscreen" id="canvas8" style="visibility:hidden">
+	<h2 id="step8" style="font-family:verdana; visibility:hidden;">Observation and Results:</h2>
+	<table id="table" border size=1 style="visibility:hidden; font-family:verdana; font-size:14px; ">
+	<tr>
+		<th style="text-align:center;font-family:verdana; font-size:14px;">Sl.No</th>
+		<th style="text-align:center;font-family:verdana; font-size:14px;">Time(min)</th>
+		<th style="text-align:center;font-family:verdana; font-size:14px;">Penetration(mm)</th>
+	</tr>
+
+	 <tr><td style="text-align:center;font-family:verdana; font-size:14px;">1</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">5</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">0</td>
+	</tr>
+	<tr>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">2</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">10</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">0</td>
+	</tr>
+	<tr>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">3</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">15</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">0</td>
+	</tr>
+	<tr>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">4</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">20</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">1</td>
+	</tr><tr>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">5</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">25</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">2</td>
+	</tr><tr>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">6</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">30</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">3</td>
+	</tr><tr>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">7</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">35</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">4</td>
+	</tr><tr>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">8</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">40</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">4</td>
+	</tr><tr>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">9</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">45</td>
+		<td style="text-align:center;font-family:verdana; font-size:14px;">5</td>
+	</tr>
+	</table>
+	
+	<h2 id="rs" style="position:absolute; left:-20px; top:170px; color:black; visibility:hidden; text-align:center;">Repeat for different positions on the mould until the plunger stops penetrating 5mm from the bottom of the mould.</h2>
+
+	<div id="inferenceDiv" style="position:absolute; left:460px; top:80px; visibility:hidden;">
+		<div id="inference" style="  background-color:grey; color:white; padding:8.5px; border-radius:5px; font-family:verdana;">
+		<p>Initial setting time of cement is</p>
+		<input type="radio" name="inf" value="1">&nbsp;30</br>
+		<input type="radio" name="inf" value="2">&nbsp;35</br>
+		<input type="radio" name="inf" value="3">&nbsp;40</br>
+		<input type="radio" name="inf" value="4">&nbsp;45</br></br>
+		<input type="button" value="Submit" onclick="checkInference();"/>
+		<p id="ans" style="visibility:hidden;"></p>
+	</div>
 </div>
-<p id="infAns" style="display:none;  font-weight:bold; position:absolute; left:10px; top:390px; text-align:justify; width:675px;"></p>
+
+<h3 id="ob" style="position:absolute; left:10px; top:390px; visibility:hidden;">Inference: </h3>
+<p id="infAns" style="display:none; font-weight:bold; position:absolute; left:10px; top:420px; text-align:justify; width:675px;"></p>
 
 </div>
 
